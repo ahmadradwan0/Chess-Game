@@ -33,3 +33,4 @@ C:\Users\admin\source\repos\Chess.TLDevProject\Chess.TLDevProject\obj\Debug\net8
 C:\Users\admin\source\repos\Chess.TLDevProject\Chess.TLDevProject\obj\Debug\net8.0\Chess.TLDevProject.pdb
 C:\Users\admin\source\repos\Chess.TLDevProject\Chess.TLDevProject\obj\Debug\net8.0\Chess.TLDevProject.genruntimeconfig.cache
 C:\Users\admin\source\repos\Chess.TLDevProject\Chess.TLDevProject\obj\Debug\net8.0\ref\Chess.TLDevProject.dll
+C:\Users\admin\source\repos\Chess.TLDevProject\Chess.TLDevProject\obj\Debug\net8.0\Chess.TLDevProject.sourcelink.json

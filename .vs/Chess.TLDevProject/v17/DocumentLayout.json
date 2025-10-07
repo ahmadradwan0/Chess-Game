@@ -66,8 +66,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\MoveGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T13:45:55.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T13:45:55.556Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameStatusEvaluator.cs",
               "ViewState": "AgIAACAAAAAAAAAAAADwvx0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T13:04:12.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T13:04:12.522Z"
             },
             {
               "$type": "Document",
@@ -92,8 +90,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\FENConverter.cs",
               "ViewState": "AgIAAFAAAACAMzMzMzMhwGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T11:15:55.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-07T11:15:55.147Z"
             },
             {
               "$type": "Document",
@@ -103,7 +100,7 @@
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
-              "ViewState": "AgIAAAkAAACcmZmZmZk8wBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAACcmZmZmZk4wBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-06T20:12:22.709Z",
               "EditorCaption": ""
@@ -118,8 +115,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\MovementValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T14:37:50.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T14:37:50.123Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\Movement.cs",
               "ViewState": "AgIAAE0AAAAAAAAAAAAWwF8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T11:43:57.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T11:43:57.654Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\LiveGameState.cs",
               "ViewState": "AgIAAAcAAAAgAAAAAAAgwAAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T00:42:50.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T00:42:50.351Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\Models\\MoveRecord.cs",
               "ViewState": "AgIAABAAAAAANDMzMzMHwB0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T21:13:00.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T21:13:00.327Z"
             },
             {
               "$type": "Document",
@@ -182,8 +175,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\Models\\ChessPiece.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T03:56:57.756Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T03:56:57.756Z"
             },
             {
               "$type": "Document",
@@ -195,8 +187,7 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\Models\\GlobalEnums.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T01:15:18.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T01:15:18.54Z"
             }
           ]
         }

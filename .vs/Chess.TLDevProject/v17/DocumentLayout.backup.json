@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\gamestatusevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\gamestatusevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\movegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\movegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\movementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\movementvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\models\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\models\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\livegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\livegamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\models\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\models\\moverecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\models\\chesspiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\models\\chesspiece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\models\\boardsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\models\\boardsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\models\\globalenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\models\\globalenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\gameengine\\fenconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\gameengine\\fenconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|c:\\users\\admin\\source\\repos\\chess.tldevproject\\chess.tldevproject\\gameheart\\models\\boardsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE1DC3E-BCCA-42C1-A968-C5A44FD49146}|Chess.TLDevProject\\Chess.TLDevProject.csproj|solutionrelative:chess.tldevproject\\gameheart\\models\\boardsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,63 +54,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "MoveGenerator.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\MoveGenerator.cs",
+              "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\MoveGenerator.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\MoveGenerator.cs",
+              "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\MoveGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T13:45:55.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameStatusEvaluator.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\GameStatusEvaluator.cs",
+              "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameStatusEvaluator.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\GameStatusEvaluator.cs",
+              "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameStatusEvaluator.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAADwvx0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T13:04:12.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FENConverter.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\FENConverter.cs",
+              "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\FENConverter.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\FENConverter.cs",
+              "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\FENConverter.cs",
+              "ViewState": "AgIAAFAAAACAMzMzMzMhwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T11:15:55.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\GameManager.cs",
-              "ViewState": "AgIAAAsAAACAZmZmZmYqwDMAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAACcmZmZmZk8wBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-06T20:12:22.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MovementValidator.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\MovementValidator.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\MovementValidator.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\MovementValidator.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\MovementValidator.cs",
-              "ViewState": "AgIAABIAAAAAZmZmZmYjwCwAAABqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-03T14:37:50.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\Movement.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\Movement.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\Movement.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\Movement.cs",
-              "ViewState": "AgIAAAUAAABAMzMzMzM7wB8AAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAWwF8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-03T11:43:57.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LiveGameState.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\LiveGameState.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\GameEngine\\LiveGameState.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\GameEngine\\LiveGameState.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\GameEngine\\LiveGameState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAgAAAAAAAgwAAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T00:42:50.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "BoardSnapShot.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\Models\\BoardSnapShot.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\Models\\BoardSnapShot.cs",
@@ -106,25 +157,24 @@
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\Models\\BoardSnapShot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T23:10:05.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-01T23:10:05.418Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MoveRecord.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\Models\\MoveRecord.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\Models\\MoveRecord.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\Models\\MoveRecord.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\Models\\MoveRecord.cs",
-              "ViewState": "AgIAABAAAAAANDMzMzMHwBsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAANDMzMzMHwB0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T21:13:00.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ChessPiece.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\Models\\ChessPiece.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\Models\\ChessPiece.cs",
@@ -137,15 +187,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "GlobalEnums.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\Models\\GlobalEnums.cs",
               "RelativeDocumentMoniker": "Chess.TLDevProject\\GameHeart\\Models\\GlobalEnums.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\Chess.TLDevProject\\Chess.TLDevProject\\GameHeart\\Models\\GlobalEnums.cs",
               "RelativeToolTip": "Chess.TLDevProject\\GameHeart\\Models\\GlobalEnums.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T01:15:18.54Z"
+              "WhenOpened": "2025-10-01T01:15:18.54Z",
+              "EditorCaption": ""
             }
           ]
         }
