@@ -35,6 +35,9 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
             CurrentGameMovesHistoryList.Add(move);
 
+            GameStatusEvaluator.Evaluate(GameState, out var status, out var result, out var message);
+
+
             return true;
         }
 

@@ -12,7 +12,7 @@
 
     public enum ChessGameResult
     {
-        Draw,WhiteWin,BlackWin, Resigned, Aborted
+        None,Draw,WhiteWin,BlackWin, Resigned, Aborted
     }
 
     public enum ChessGameStatus

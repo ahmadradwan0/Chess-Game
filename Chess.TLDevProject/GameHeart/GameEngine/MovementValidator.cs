@@ -1,4 +1,5 @@
 ﻿using Chess.TLDevProject.GameHeart.Models;
+using System.Drawing;
 
 namespace Chess.TLDevProject.GameHeart.GameEngine
 {
@@ -17,6 +18,8 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 return false;
 
             var piece = state.Board[move.FromRow, move.FromCol];
+
+
             if (piece == null) 
                 return false;
 
@@ -40,6 +43,34 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 return false;
 
             return true;
+        }
+
+        public static bool IsKingInCheckNow(LiveGameState state, ChessPieceColor kingColor)
+        {
+            int kingRow = -1;
+            int kingCol = -1;
+
+            // find the king on the borad to see if its incheck
+            for (int row = 0; row < 8; row++)
+            {
+                for (int col = 0; col < 8; col++)
+                {
+                    var piece = state.Board[row, col];
+                    if (piece != null &&  piece.PieceType == ChessPieceType.King &&  piece.PieceColor == kingColor)
+                    {
+                        kingRow = row;
+                        kingCol = col;
+                        break;
+                    }
+                }
+                if (kingRow != -1) break; // king found, no need to keep searching
+            }
+
+            
+
+            // ⚔️ Check if the king’s square is under attack
+            var dummyKing = new ChessPiece(kingColor, ChessPieceType.King);
+            return IsSquareIsUnderAttack(state, dummyKing, kingRow, kingCol);
         }
 
         private static bool KingIsInCheckAfterMove(LiveGameState state, MoveRecord move, ChessPiece piece)
