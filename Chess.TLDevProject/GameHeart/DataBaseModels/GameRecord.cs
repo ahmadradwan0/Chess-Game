@@ -17,5 +17,7 @@
         public byte? Promotion { get; set; }
 
         public string FenString { get; set; } = "";
+
+        public int MoveNumber { get; set; }
     }
 }

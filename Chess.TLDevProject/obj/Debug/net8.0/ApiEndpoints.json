@@ -1,23 +1,182 @@
 [
   {
-    "ContainingType": "Chess.TLDevProject.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Game/all-users",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "LoginUser",
+    "RelativePath": "api/Game/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Chess.TLDevProject.WeatherForecast, Chess.TLDevProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "user",
+        "Type": "Chess.TLDevProject.GameHeart.DataBaseModels.User",
+        "IsRequired": true
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "GetMatchLastFen",
+    "RelativePath": "api/Game/match/{matchId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "GetMatchRecords",
+    "RelativePath": "api/Game/match/{matchId}/records",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "GetUserMatches",
+    "RelativePath": "api/Game/matches/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "MakeMove",
+    "RelativePath": "api/Game/move",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "record",
+        "Type": "Chess.TLDevProject.GameHeart.DataBaseModels.GameRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "RestartGame",
+    "RelativePath": "api/Game/restart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "matchId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "StartGame",
+    "RelativePath": "api/Game/start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "match",
+        "Type": "Chess.TLDevProject.GameHeart.DataBaseModels.Match",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "UndoMove",
+    "RelativePath": "api/Game/undo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "record",
+        "Type": "Chess.TLDevProject.GameHeart.DataBaseModels.GameRecord",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Game/user",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "Chess.TLDevProject.GameHeart.DataBaseModels.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chess.TLDevProject.Controllers.GameController",
+    "Method": "GetValidMoves",
+    "RelativePath": "api/Game/valid-moves",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fromRow",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fromCol",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

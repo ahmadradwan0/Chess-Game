@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chess.TLDevProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4debf7d9544acafa0e1c9de8881d4ab83a4bf622")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+265fa0e5db286905383477dbaee22aad4e08c6e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chess.TLDevProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chess.TLDevProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

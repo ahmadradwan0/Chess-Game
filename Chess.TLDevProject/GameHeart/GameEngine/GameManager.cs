@@ -4,7 +4,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 {
     public class GameManager
     {
-        public LiveGameState GameState { get; private set; }
+        public LiveGameState GameState { get; set; }
 
         public List<MoveRecord> CurrentGameMovesHistoryList { get; private set; }
         public List<BoardSnapshot> CurrentGameBoardSnapshotsList { get; private set; }
@@ -29,7 +29,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 return false;
             }
 
-            CurrentGameBoardSnapshotsList.Add(new BoardSnapshot(GameState));
+            GlobalSnapshots.Add(new BoardSnapshot(GameState));
 
             Movement.Apply(GameState,move);
 
@@ -43,27 +43,21 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
         public bool UndoMove()
         {
-            if(CurrentGameBoardSnapshotsList.Count == 0)
-            {
+            var snapshot = GlobalSnapshots.GetLast();
+            if (snapshot == null)
                 return false;
-            }
 
-            var LastGameSnapShotSavedInList = CurrentGameBoardSnapshotsList[CurrentGameBoardSnapshotsList.Count - 1];
-
-            GameState = new LiveGameState(LastGameSnapShotSavedInList);
-
-            CurrentGameBoardSnapshotsList.RemoveAt(CurrentGameBoardSnapshotsList.Count - 1);
-            CurrentGameMovesHistoryList.RemoveAt(CurrentGameMovesHistoryList.Count - 1);
-
+            GameState = new LiveGameState(snapshot);
+            GlobalSnapshots.RemoveLast();
             return true;
         }
 
         public void GameReset()
         {
             GameState = new LiveGameState();
-            CurrentGameBoardSnapshotsList.Clear();
+            GlobalSnapshots.Clear();
             CurrentGameMovesHistoryList.Clear();
-            
+
         }
 
 

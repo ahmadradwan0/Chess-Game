@@ -23,13 +23,21 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 HandleEnPassantToRemovePawn(state, move, piece);
             }
 
-            // 🟢 Perform the move
+            // Perform the move
             MovePiece(state, move, piece);
 
-            // 🟢 Handle promotion (after the pawn lands)
-            if (piece.PieceType == ChessPieceType.Pawn && move.Promotion.HasValue)
+
+            // promote pawn when get to last raw
+            if (piece.PieceType == ChessPieceType.Pawn)
             {
-                PromotePawn(state, move, piece);
+                bool isPawninLastRaw = (piece.PieceColor == ChessPieceColor.White && move.ToRow == 0) ||
+                                       (piece.PieceColor == ChessPieceColor.Black && move.ToRow == 7);
+
+                if (isPawninLastRaw)
+                {
+                    move.Promotion = ChessPieceType.Queen; // just for testing now
+                    PromotePawn(state, move, piece);
+                }
             }
 
             UpdateStateAndCountersAfterEveryMove(state, move, piece);
@@ -88,6 +96,8 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             UpdateMoveCounters(state, piece, move);
  
         }
+
+        // update move numbers for 50 move rule and will switch side function runs last thing after everything
         private static void UpdateMoveCounters(LiveGameState state, ChessPiece piece, MoveRecord move)
         {
             if (piece.PieceType == ChessPieceType.Pawn || move.IsCapture)
@@ -95,10 +105,14 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             else
                 state.HalfmoveClock++;
 
+            // for tacking
             if (piece.PieceColor == ChessPieceColor.Black)
                 state.FullmoveNumber++;
 
-            // 🟢 Switch side to move
+            //counter move:
+            state.MoveCounter++;
+
+            // Switch side to move
             state.SideToMove = (state.SideToMove == ChessPieceColor.White)
                 ? ChessPieceColor.Black
                 : ChessPieceColor.White;
@@ -141,6 +155,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             }
         }
 
+        //if pawn moved 2 squares it will be a target for enpassent
         private static void UpdateEnPassesntTarget(LiveGameState state, ChessPiece piece, MoveRecord move)
         {
             

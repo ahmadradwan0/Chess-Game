@@ -45,12 +45,14 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return true;
         }
 
+        //// find the king on the borad to see if its incheck for game status
         public static bool IsKingInCheckNow(LiveGameState state, ChessPieceColor kingColor)
         {
+            //cause 0 is used by other pices
             int kingRow = -1;
             int kingCol = -1;
 
-            // find the king on the borad to see if its incheck
+            
             for (int row = 0; row < 8; row++)
             {
                 for (int col = 0; col < 8; col++)
@@ -63,12 +65,12 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                         break;
                     }
                 }
-                if (kingRow != -1) break; // king found, no need to keep searching
+                if (kingRow != -1) break; 
             }
 
             
 
-            // ⚔️ Check if the king’s square is under attack
+            
             var dummyKing = new ChessPiece(kingColor, ChessPieceType.King);
             return IsSquareIsUnderAttack(state, dummyKing, kingRow, kingCol);
         }
@@ -406,131 +408,6 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return false;
         }
 
-        /*
-
-        private static bool CheckIfRookIsAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece rook)
-        {
-            int fromRow = move.FromRow;
-            int toRow = move.ToRow;
-            int fromCol = move.FromCol;
-            int toCol = move.ToCol;
-            var theTargetSquare = state.Board[move.ToRow, move.ToCol];
-
-            int DifferenceInRow = toRow - fromRow;
-            int DiffereneceInCol = toCol - fromCol;
-
-
-            if ((Math.Abs(DifferenceInRow) > 0 && (DiffereneceInCol) == 0) ||
-                ((DifferenceInRow) == 0 && Math.Abs(DiffereneceInCol) > 0))
-            {
-                if (DifferenceInRow == 0)
-                {
-                    // left and right 
-                    
-                    for (int stepsToMove = 1; stepsToMove <= Math.Abs(DiffereneceInCol); stepsToMove++)
-                    {
-                        if (DiffereneceInCol > 0)
-                        {
-                            if (state.Board[fromRow, fromCol + stepsToMove] != null)
-                            {
-                                if (toRow == fromRow && toCol == fromCol + stepsToMove)
-                                {
-                                    // means we reached the target square
-                                    // exit the loop to contine the code
-                                    break;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
-                                    
-                            }
-                            else
-                            {
-                                //contine to the next square
-                                continue;
-                            }
-                        }
-
-                        if (DiffereneceInCol < 0)
-                        {
-                            if (state.Board[fromRow, fromCol - stepsToMove] != null)
-                            {
-                                if (toRow == fromRow && toCol == fromCol + stepsToMove)
-                                {
-                                    // means we reached the target square
-                                    // exit the loop to contine the code
-                                    break;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
-                            }
-                            else
-                            {
-                                continue;
-                            }
-                        }
-
-                    }
-
-                    //
-
-                }
-
-                //up and down
-                if (DiffereneceInCol == 0)
-                {
-                    for (int stepsToMove = 1; stepsToMove <= Math.Abs(DifferenceInRow); stepsToMove++)
-                    {
-                        if (DifferenceInRow > 0)
-                        {
-                            if (state.Board[fromRow + stepsToMove, fromCol] != null)
-                            {
-                                if (toCol == fromCol && toRow == fromRow + stepsToMove)
-                                {
-                                    // means we reached the target square
-                                    // exit the loop to contine the code
-                                    break;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
-                            }
-                            else
-                            {
-                                continue;
-                            }
-                        }
-
-                        if (DifferenceInRow < 0)
-                        {
-                            if (state.Board[fromRow - stepsToMove, fromCol] != null)
-                            {
-                                if (toCol == fromCol && toRow == fromRow - stepsToMove)
-                                {
-                                    // means we reached the target square
-                                    // exit the loop to contine the code
-                                    break;
-                                }
-                                else
-                                {
-                                    return false;
-                                }
-                            }
-                            else
-                            {
-                                continue;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        */
 
 
         private static bool CheckIfRookIsAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece rook)

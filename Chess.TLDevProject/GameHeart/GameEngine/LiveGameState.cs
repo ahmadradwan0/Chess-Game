@@ -19,7 +19,11 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
         
         public int HalfmoveClock { get; set; } = 0;
+
+        // not really useful now 
         public int FullmoveNumber { get; set; } = 1;
+
+        public int MoveCounter { get; set; } = 0;
 
         // filling initail pieces
         public LiveGameState()
