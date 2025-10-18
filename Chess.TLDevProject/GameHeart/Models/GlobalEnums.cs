@@ -35,11 +35,4 @@
         Ended = 4
     }
 
-    public enum ChessPromotionPiece
-    {
-        Queen = 0,
-        Rook = 1,
-        Bishop = 2,
-        Knight = 3
-    }
 }

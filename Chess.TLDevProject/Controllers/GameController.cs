@@ -189,7 +189,7 @@ namespace Chess.TLDevProject.Controllers
             return Ok(new
             {
                 NewFen = newFen,
-                Message = "Last move undone successfully.",
+                Message = "Last move undone successfully",
                 Status = "InProgress",
                 Result = "None"
             });

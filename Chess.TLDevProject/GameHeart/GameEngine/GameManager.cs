@@ -52,13 +52,6 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return true;
         }
 
-        public void GameReset()
-        {
-            GameState = new LiveGameState();
-            GlobalSnapshots.Clear();
-            CurrentGameMovesHistoryList.Clear();
-
-        }
 
 
     }

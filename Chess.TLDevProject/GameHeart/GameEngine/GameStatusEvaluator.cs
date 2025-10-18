@@ -11,7 +11,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             result = ChessGameResult.None;
             message = "";
 
-            //first check the 50 rule "
+            
 
             if (GameState.HalfmoveClock >= 100)
             {

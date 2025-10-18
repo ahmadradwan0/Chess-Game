@@ -26,10 +26,5 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             Snapshots.RemoveAt(Snapshots.Count - 1);
             return true;
         }
-
-        public static void Clear()
-        {
-            Snapshots.Clear();
-        }
     }
 }

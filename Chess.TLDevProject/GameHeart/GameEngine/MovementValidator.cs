@@ -7,13 +7,13 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
     {
         public static bool IsMoveAllowed(LiveGameState state, MoveRecord move)
         {
-            // check source and destination inside board
+            
             if (move.FromRow < 0 || move.FromRow > 7 || move.FromCol < 0 || move.FromCol > 7) 
                 return false;
             if (move.ToRow < 0 || move.ToRow > 7 || move.ToCol < 0 || move.ToCol > 7) 
                 return false;
 
-            // cannot move to same square
+            
             if (move.FromRow == move.ToRow && move.FromCol == move.ToCol) 
                 return false;
 
@@ -23,21 +23,22 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             if (piece == null) 
                 return false;
 
-            // must move only own color
+            
             if (piece.PieceColor != state.SideToMove) 
                 return false;
 
             var targetSquare = state.Board[move.ToRow, move.ToCol];
-            // cannot capture own piece
+            
+
             if (targetSquare != null && targetSquare.PieceColor == piece.PieceColor) 
                 return false;
 
-            // now check piece movement rules
+            
             bool isItaValidMove = ValidateByPiece(state, move, piece);
             if (!isItaValidMove) 
                 return false;
 
-            // finally check if move leaves own king in check
+            
             bool isKingWillisCheckStatusIfPieceMoved = KingIsInCheckAfterMove(state, move, piece);
             if (isKingWillisCheckStatusIfPieceMoved) 
                 return false;
@@ -75,16 +76,19 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return IsSquareIsUnderAttack(state, dummyKing, kingRow, kingCol);
         }
 
+        //====================================================================================
+        //====================================================================================
+
         private static bool KingIsInCheckAfterMove(LiveGameState state, MoveRecord move, ChessPiece piece)
         {
-            // make a temporary copy of the board
+            
             var tempState = new LiveGameState(new BoardSnapshot(state));
 
-            // apply the move temporarily
+            
             tempState.Board[move.ToRow, move.ToCol] = tempState.Board[move.FromRow, move.FromCol];
             tempState.Board[move.FromRow, move.FromCol] = null;
 
-            //make sure if there is castling to notate that
+            
             if (piece.PieceType == ChessPieceType.King && move.IsCastling)
             {
                 int row = move.FromRow;
@@ -101,6 +105,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             }
 
             int kingRow = -1, kingCol = -1;
+
             // find the king 
             for (int row = 0; row < 8; row++)
             {
@@ -119,10 +124,14 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             if (kingRow == -1 || kingCol == -1)
                 return false; // should never happen
 
-            // check if the king is attacked after move
+            
             var dummyKing = new ChessPiece(piece.PieceColor, ChessPieceType.King);
             return IsSquareIsUnderAttack(tempState, dummyKing, kingRow, kingCol);
         }
+
+        //====================================================================================
+        //====================================================================================
+
         private static bool IsSquareIsUnderAttack(LiveGameState state,ChessPiece piece , int squareRow, int squareCol)
         {
             ChessPieceColor opponentColor = piece.PieceColor == ChessPieceColor.White
@@ -148,14 +157,14 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                             int leftAttackCol = column - 1;
                             int rightAttackCol = column + 1;
 
-                            // If target square matches either of pawn’s attack squares → attacked
+                            
                             if ((attackRow == squareRow && leftAttackCol == squareCol) ||
                                 (attackRow == squareRow && rightAttackCol == squareCol))
                             {
                                 return true;
                             }
 
-                            // Skip normal move validation for pawns
+                            
                             continue;
                         }
 
@@ -171,6 +180,9 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
             return false;
         }
+
+        //====================================================================================
+        //====================================================================================
 
         private static bool ValidateByPiece(LiveGameState state, MoveRecord move, ChessPiece piece)
         {
@@ -209,6 +221,9 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return false;
         }
 
+        //====================================================================================
+        //====================================================================================
+
         private static bool CheckIfPawnAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece pawn)
         {
             int fromRow = move.FromRow;
@@ -228,7 +243,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
             var theTargetSquare = state.Board[move.ToRow, move.ToCol];
 
-            // first setp is to move foraward :
+            
             if ((toRow - fromRow == movementDirectionValue) && (toCol - fromCol == 0))
             {
                 if (theTargetSquare != null)
@@ -241,7 +256,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 }
             }
 
-            //secound to jump 2 squares 
+            //jump 2
             bool isPieceOnStillOnStartPoint = (pawn.PieceColor == ChessPieceColor.White && fromRow == 6) ||
                                               (pawn.PieceColor == ChessPieceColor.Black && fromRow == 1);
             if ((toRow - fromRow == movementDirectionValue * 2) && (toCol - fromCol == 0) && isPieceOnStillOnStartPoint)
@@ -258,13 +273,13 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                     return false;
                 }
 
-                //state.EnPassantTarget = (squareValuePawnJumpedRowValue, fromCol);
+                
                 return true;
             }
 
-            // third is to check the diagonal capture and the enpassenet 
+            // diagonal capture and the enpassenet 
 
-            if (Math.Abs(move.ToRow - move.FromRow) == 1 && Math.Abs(move.ToCol - move.FromCol) == 1)
+            if (move.ToRow - move.FromRow == movementDirectionValue && Math.Abs(move.ToCol - move.FromCol) == 1)
             {
                 if (theTargetSquare != null && theTargetSquare.PieceColor != pawn.PieceColor)
                 {
@@ -289,6 +304,9 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return false;
 
         }
+
+        //====================================================================================
+        //====================================================================================
 
         private static bool CheckIfKnightisAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece knight)
         {
@@ -317,6 +335,10 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
             return false;
         }
+
+
+        //====================================================================================
+        //====================================================================================
 
         private static bool CheckIfKingIsAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece king)
         {
@@ -352,7 +374,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 int rookColValue;
                 int squareValueKingJumpedColValue;
 
-                // kingside castling → to the right
+               
                 if (fromCol < toCol)
                 {
                     if (IsSquareIsUnderAttack(state, king, move.FromRow, move.FromCol + 1))
@@ -361,12 +383,12 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                     if (IsSquareIsUnderAttack(state, king, move.ToRow, move.ToCol))
                         return false;
 
-                    // Check empty path
+                    
                     if (state.Board[fromRow, fromCol + 1] != null || state.Board[fromRow, fromCol + 2] != null)
                         return false;
 
                     squareValueKingJumpedColValue = fromCol + 1;
-                    rookColValue = 7; // right-side rook
+                    rookColValue = 7; 
 
                     var rook = state.Board[rookRowValue, rookColValue];
                     if (rook != null && !rook.HasMoved && rook.PieceType == ChessPieceType.Rook && rook.PieceColor == king.PieceColor)
@@ -378,7 +400,8 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                         }
                     }
                 }
-                // queenside castling → to the left
+
+                // queenside castling
                 else if (fromCol > toCol)
                 {
                     if (IsSquareIsUnderAttack(state, king, move.FromRow, move.FromCol - 1))
@@ -387,12 +410,12 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                     if (IsSquareIsUnderAttack(state, king, move.ToRow, move.ToCol))
                         return false;
 
-                    // Check empty path (3 squares on queenside)
+                    
                     if (state.Board[fromRow, 1] != null || state.Board[fromRow, 2] != null || state.Board[fromRow, 3] != null)
                         return false;
 
                     squareValueKingJumpedColValue = fromCol - 1;
-                    rookColValue = 0; // left-side rook
+                    rookColValue = 0;
 
                     var rook = state.Board[rookRowValue, rookColValue];
                     if (rook != null && !rook.HasMoved && rook.PieceType == ChessPieceType.Rook && rook.PieceColor == king.PieceColor)
@@ -408,6 +431,9 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             return false;
         }
 
+
+        //====================================================================================
+        //====================================================================================
 
 
         private static bool CheckIfRookIsAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece rook)
@@ -420,11 +446,11 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             int DifferenceInRow = toRow - fromRow;
             int DiffereneceInCol = toCol - fromCol;
 
-            // The rook must move in a straight line only (either row or column)
+           
             if (DifferenceInRow != 0 && DiffereneceInCol != 0)
                 return false;
 
-            // 🟢 Horizontal move (left or right)
+           
             if (DifferenceInRow == 0)
             {
                 int stepDirection = (DiffereneceInCol > 0) ? 1 : -1;
@@ -433,12 +459,12 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 {
                     if (state.Board[fromRow, step] != null)
                     {
-                        return false; // path blocked
+                        return false; 
                     }
                 }
             }
 
-            // 🟢 Vertical move (up or down)
+            
             else if (DiffereneceInCol == 0)
             {
                 int stepDirection = (DifferenceInRow > 0) ? 1 : -1;
@@ -447,28 +473,32 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
                 {
                     if (state.Board[step, fromCol] != null)
                     {
-                        return false; // path blocked
+                        return false; 
                     }
                 }
             }
 
-            // 🎯 Check the target square
+           
             var theTargetSquare = state.Board[toRow, toCol];
 
             if (theTargetSquare == null)
             {
-                return true; // empty square, move allowed
+                return true; 
             }
 
             if (theTargetSquare.PieceColor != rook.PieceColor)
             {
                 move.IsCapture = true;
-                return true; // capture allowed
+                return true; 
             }
 
-            // same color piece → not allowed
+            
             return false;
         }
+
+        //====================================================================================
+        //====================================================================================
+
 
         private static bool CheckIfBishopIsAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece bishop)
         {
@@ -494,26 +524,29 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
                 if (state.Board[squareRowToCheck, squareColToCheck] != null)
                 {
-                    // something blocking the path → bishop can't jump
+                    
                     return false;
                 }
             }
-            // check the destination square
             var theTargetSquare = state.Board[toRow, toCol];
 
             if (theTargetSquare == null)
             {
-                return true; // empty destination → valid move
+                return true;
             }
 
             if (theTargetSquare.PieceColor != bishop.PieceColor)
             {
                 move.IsCapture = true;
-                return true; // can capture opponent's piece
+                return true; 
             }
 
-            return false; // cannot capture own piece
+            return false; 
         }
+
+        //====================================================================================
+        //====================================================================================
+
 
         private static bool CheckIfQueenIsAllowedToMove(LiveGameState state, MoveRecord move, ChessPiece queen)
         {

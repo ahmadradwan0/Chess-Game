@@ -9,10 +9,10 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
         {
             var piece = state.Board[move.FromRow, move.FromCol];
             if (piece == null)
-                throw new InvalidOperationException("No piece at source square.");
+                throw new InvalidOperationException("No piece square");
 
 
-            // 🟢 Handle special cases first
+           
             if (piece.PieceType == ChessPieceType.King && move.IsCastling)
             {
                 HandleCastlingToMoveCastle(state, move, piece);
@@ -35,8 +35,17 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
                 if (isPawninLastRaw)
                 {
-                    move.Promotion = ChessPieceType.Queen; // just for testing now
-                    PromotePawn(state, move, piece);
+                    if (move.Promotion.HasValue)
+                    {
+                        state.Board[move.ToRow, move.ToCol] =
+                            new ChessPiece(piece.PieceColor, move.Promotion!.Value);
+                    }
+                    else
+                    {
+                        move.Promotion = ChessPieceType.Queen;
+                        state.Board[move.ToRow, move.ToCol] =
+                            new ChessPiece(piece.PieceColor, move.Promotion!.Value);
+                    }
                 }
             }
 
@@ -45,6 +54,7 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
 
         }
+        //====================================================================================
 
         private static void MovePiece(LiveGameState state, MoveRecord move, ChessPiece piece)
         {
@@ -67,26 +77,20 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
 
             int row = move.FromRow;
 
-            if (move.ToCol == 6) // Kingside
+            if (move.ToCol == 6) 
             {
                 var rook = state.Board[row, 7];
                 state.Board[row, 5] = rook;
                 state.Board[row, 7] = null;
                 if (rook != null) rook.HasMoved = true;
             }
-            else if (move.ToCol == 2) // Queenside
+            else if (move.ToCol == 2) 
             {
                 var rook = state.Board[row, 0];
                 state.Board[row, 3] = rook;
                 state.Board[row, 0] = null;
                 if (rook != null) rook.HasMoved = true;
             }
-        }
-
-        private static void PromotePawn(LiveGameState state, MoveRecord move, ChessPiece pawn)
-        {
-            state.Board[move.ToRow, move.ToCol] =
-                new ChessPiece(pawn.PieceColor, move.Promotion!.Value);
         }
 
         private static void UpdateStateAndCountersAfterEveryMove(LiveGameState state, MoveRecord move, ChessPiece piece)
@@ -97,7 +101,6 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
  
         }
 
-        // update move numbers for 50 move rule and will switch side function runs last thing after everything
         private static void UpdateMoveCounters(LiveGameState state, ChessPiece piece, MoveRecord move)
         {
             if (piece.PieceType == ChessPieceType.Pawn || move.IsCapture)
@@ -105,14 +108,14 @@ namespace Chess.TLDevProject.GameHeart.GameEngine
             else
                 state.HalfmoveClock++;
 
-            // for tacking
+            // Not used noww
             if (piece.PieceColor == ChessPieceColor.Black)
                 state.FullmoveNumber++;
 
-            //counter move:
+            
             state.MoveCounter++;
 
-            // Switch side to move
+            
             state.SideToMove = (state.SideToMove == ChessPieceColor.White)
                 ? ChessPieceColor.Black
                 : ChessPieceColor.White;
